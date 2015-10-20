@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tianshijie1"
+    android:versionCode="1"
+    android:versionName="1.0.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- ###################声明SDK使用的相关权限###################### -->
+    <!-- 检测网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 获取mac地址作为用户的备用唯一标识 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取用户手机的IMEI，用来唯一的标识用户 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 缓存资源优先存入SDcard -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- QQ、QQ空间所需权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- 在sdcard中创建/删除文件的权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 添加可以向外拨打电话的权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+
+    <application
+        android:name="com.example.tianshijie1.application.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon2"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="55d599d2e0f55aefb800087e" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Channel ID" />
+        <!-- Update Activitys Start -->
+        <!-- ###################注册SDK使用的Activity###################### -->
+        <!-- 分享编辑页 -->
+        <activity
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.example.tianshijie1.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service
+            android:name="com.umeng.update.net.DownloadingService"
+            android:process=":DownloadingService" >
+        </service>
+
+        <activity
+            android:name="com.example.tianshijie1.ShanpingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppStartTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.tianshijie1.TfirstActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.tianshijie1.MainActivity"
+            android:label="@string/title_activity_choice_identity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.tianshijie1.ChoiceIdentityActivity"
+            android:label="@string/title_activity_tfirst"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.tianshijie1.ZhuceActivity"
+            android:label="@string/title_activity_zhuce"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.tianshijie1.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.tianshijie1.Forgetpassword1Activity"
+            android:label="@string/title_activity_forgetpassword1"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.tianshijie1.ForgetPassword2Activity"
+            android:label="@string/title_activity_forget_password2"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.tianshijie1.XiangmuListActivity"
+            android:label="@string/title_activity_xiangmu_list"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.tianshijie1.XiangqingFeishitiActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_xiangqing_feishiti"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.tianshijie1.MineguanzhuActivity"
+            android:label="@string/title_activity_mineguanzhu"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.tianshijie1.MineXinxiActivity"
+            android:label="@string/title_activity_mine_xinxi"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.tianshijie1.MineXinxiChangeActivity"
+            android:label="@string/title_activity_mine_xinxi_change"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.tianshijie1.XiangmuguanliActivity"
+            android:label="@string/title_activity_xiangmuguanli"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.tianshijie1.YugouRengouActivity"
+            android:label="@string/title_activity_yugou_rengou"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.tianshijie1.FindActivity"
+            android:label="@string/title_activity_find"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.tianshijie1.XiangmushitiActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_xiangmushiti"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.tianshijie1.MineShezhiActivity"
+            android:label="@string/title_activity_mine_shezhi"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.tianshijie1.MinePasswordChangeActivity"
+            android:label="@string/title_activity_mine_password_change"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.tianshijie1.MineYjfkActivity"
+            android:label="@string/title_activity_mine_yjfk"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.tianshijie1.AboutusActivity"
+            android:label="@string/title_activity_aboutus"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.tianshijie1.WebviewActivity"
+            android:label="@string/title_activity_webview"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.tianshijie1.ZhanghuguanliActivity"
+            android:label="@string/title_activity_zhanghuguanli"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.tianshijie1.MyMessageActivity"
+            android:label="@string/title_activity_my_message"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.tianshijie1.YuetanActivity"
+            android:label="@string/title_activity_yuetan"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.tianshijie1.FabuxiangmuActivity"
+            android:label="@string/title_activity_fabuxiangmu"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.tianshijie1.DaohangActivity"
+            android:label="@string/title_activity_daohang"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.tianshijie1.CityChoiseActivity"
+            android:label="@string/title_activity_city_choise"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.example.tianshijie1.PinglunActivity"
+            android:label="@string/title_activity_pinglun"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.tianshijie1.WebYibaoActivity"
+            android:label="@string/title_activity_web_yibao"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.tianshijie1.IdcordChangeActivity"
+            android:label="@string/title_activity_idcord_change"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.tianshijie1.WuwangActivity"
+            android:label="@string/title_activity_wuwang"
+            android:screenOrientation="portrait" >
+        </activity>
+    </application>
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+</manifest>

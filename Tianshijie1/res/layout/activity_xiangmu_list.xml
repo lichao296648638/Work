@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    tools:context=".XiangmuListActivity" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="#bc1b21" >
+
+        <TextView
+            android:id="@+id/tv_xiangmuming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            android:text="社区项目"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/iv_backxiangmulist"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/fanhui_bai" />
+
+        <ImageView
+            android:id="@+id/iv_hang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/list_heng" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_zhongjiang"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_marginTop="1dp"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_meikaishi"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:gravity="center"
+                android:text="预热中"
+                android:textColor="#666666"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="17dp"
+            android:layout_gravity="center_vertical"
+            android:background="#d1d1d1" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_kaizhene"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:gravity="center"
+                android:text="众筹中"
+                android:textColor="#cf0606"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="17dp"
+            android:layout_gravity="center_vertical"
+            android:background="#d1d1d1" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_jieshule"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:gravity="center"
+                android:text="融成项目"
+                android:textColor="#666666"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_zhongjiang"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/ll_zhongjiang"
+        android:background="#f5f5f5" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_zhongjiang" >
+
+        <!-- 这里可以把PagerTabStrip替换成PagerTitleStrip看看效果有何不同 -->
+
+    </android.support.v4.view.ViewPager>
+
+</RelativeLayout>

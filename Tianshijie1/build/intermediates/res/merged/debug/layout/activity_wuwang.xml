@@ -1,0 +1,14 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WuwangActivity" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="目前您没有任何网络连接"
+        android:textSize="15sp" />
+
+</RelativeLayout><!-- From: file:/E:/Android/AndroidStudioProjects/Work/Tianshijie1/res/layout/activity_wuwang.xml -->

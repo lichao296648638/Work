@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">天使街</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="pull_to_refresh_footer_release_label">松开后加载</string>
+    <string name="pull_to_refresh_footer_pull_label">上拉加载更多</string>
+    <string name="pull_to_refresh_footer_refreshing_label">加载中</string>
+    <string name="title_activity_choice_identity">ChoiceIdentityActivity</string>
+    <string name="title_activity_tfirst">TfirstActivity</string>
+    <string name="title_activity_zhuce">ZhuceActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_forgetpassword1">Forgetpassword1Activity</string>
+    <string name="title_activity_forget_password2">ForgetPassword2Activity</string>
+    <string name="title_activity_xiangmu_list">XIangmuListActivity</string>
+    <string name="title_activity_xiangqing_feishiti">XiangqingFeishitiActivity</string>
+    <string name="title_activity_mineguanzhu">MineguanzhuActivity</string>
+    <string name="basic_action_1">删除</string>
+    <string name="basic_action_2">Action_2</string>
+    <string name="basic_del">删除成功</string>
+    <string name="str_orange">#fe7b27</string>
+    <string name="str_green">#3cac69</string>
+    <string name="str_red">#e62f17</string>
+    <string name="str_yellow">#FFBB33</string>
+    <string name="str_sky_blue">#33B5E5</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_mine_xinxi">MineXinxiActivity</string>
+    <string name="title_activity_mine_xinxi_change">MineXinxiChangeActivity</string>
+    <string name="title_activity_xiangmuguanli">XiangmuguanliActivity</string>
+    <string name="title_activity_yugou_rengou">YugouRengouActivity</string>
+    <string name="title_activity_find">FindActivity</string>
+    <string name="title_activity_xiangmushiti">XiangmushitiActivity</string>
+    <string name="title_activity_mine_shezhi">MineShezhiActivity</string>
+    <string name="title_activity_mine_password_change">MinePasswordChangeActivity</string>
+    <string name="title_activity_mine_yjfk">MineYjfkActivity</string>
+    <string name="title_activity_aboutus">AboutusActivity</string>
+    <string name="title_activity_webview">WebviewActivity</string>
+    <string name="title_activity_zhanghuguanli">ZhanghuguanliActivity</string>
+    <string name="title_activity_my_message">MyMessageActivity</string>
+    <string name="title_activity_yuetan">YuetanActivity</string>
+    <string name="title_activity_fabuxiangmu">FabuxiangmuActivity</string>
+    <string name="title_activity_daohang">DaohangActivity</string>
+    <string name="title_activity_shanping">ShanpingActivity</string>
+    <string name="title_activity_city_choise">CityChoiseActivity</string>
+    <string name="title_activity_pinglun">PinglunActivity</string>
+    <string name="title_activity_web_yibao">WebYibaoActivity</string>
+
+    <style name="CustomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+
+    <style name="CustomProgressDialog" parent="@style/CustomDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <string name="title_activity_idcord_change">IdcordChangeActivity</string>
+    <string name="title_activity_wuwang">WuwangActivity</string>
+
+</resources>

@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#bc1a21"
+    tools:context=".TfirstActivity" >
+
+    <ImageView
+        android:layout_width="155dp"
+        android:layout_height="72dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:background="@drawable/logo_denglu" />
+
+    <RelativeLayout
+        android:id="@+id/rl_xuanzhong1"
+        android:layout_width="214dp"
+        android:layout_height="51dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="88dp" >
+
+        <Button
+            android:id="@+id/btn_denglu"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:background="@drawable/shape1"
+            android:text="登录"
+            android:textColor="#bc1a21"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_xuanzhong2"
+        android:layout_width="214dp"
+        android:layout_height="51dp"
+        android:layout_above="@+id/rl_xuanzhong1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="38dp" >
+
+        <Button
+            android:id="@+id/btn_zhuce"
+            android:layout_width="212dp"
+            android:layout_height="49dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/shape1"
+            android:text="注册"
+            android:textColor="#bc1a21"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

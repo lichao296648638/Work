@@ -1,0 +1,211 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    tools:context=".YugouRengouActivity" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="#bc1b21" >
+
+        <TextView
+            android:id="@+id/tv_yugou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            android:text="预购"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/iv_backyugourengou"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/fanhui_bai" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#e6e6e6" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="真实姓名：钟小蕊"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#e6e6e6" />
+
+        <TextView
+            android:id="@+id/tv_xiangmu"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="投资项目：会鼓励商城"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#e6e6e6" />
+
+        <TextView
+            android:id="@+id/tv_zhuangtai"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="投资状态：预热中"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#e6e6e6" />
+
+        <TextView
+            android:id="@+id/tv_meifen"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="每份金額：1万"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#e6e6e6" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="请输入份数"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/iv_jian"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/jian_1" />
+
+            <TextView
+                android:id="@+id/tv_fenshu"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@null"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="1"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/iv_jia"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/jia_2" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#e6e6e6" />
+
+        <TextView
+            android:id="@+id/tv_zongjine"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="总金额：2万"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#e6e6e6" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_tongyi"
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:layout_below="@+id/ll_linear1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/xuangzhong_hong" />
+
+    <TextView
+        android:id="@+id/textview1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_linear1"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="10dp"
+        android:text="我已认真完整的阅读并接受《天使街投资人风险揭示书》、《在线投资服务条款》和《保密及非规避协议》，并愿意自己承担投资带来的风险"
+        android:textColor="#666666"
+        android:textColorHighlight="#f5f5f5"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btn_queren"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/textview1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape4"
+        android:text="确认预购"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_ygxianshi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_queren"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="温馨提示：此认购是意向认购，并不是正式认购，项目处于融中才可正式认购"
+        android:textColor="#666666" />
+
+</RelativeLayout><!-- From: file:/E:/Android/AndroidStudioProjects/Work/Tianshijie1/res/layout/activity_yugou_rengou.xml -->
