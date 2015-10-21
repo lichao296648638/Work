@@ -51,7 +51,17 @@ public class CityPicker extends LinearLayout {
 	private HashMap<String, List<Cityinfo>> city_map = new HashMap<String, List<Cityinfo>>();
 	private HashMap<String, List<Cityinfo>> couny_map = new HashMap<String, List<Cityinfo>>();
 
-	public String province = "省";
+	/**
+	 * StartBUG
+	 * BUG描述：我的资料页面选取所在城市，默认北京情况下从县切换到市辖区，程序崩溃
+	 * BUG状态：已修复
+	 * 修复日期：2015-10-21
+	 * 修复人：李超
+	 */
+	public String province = "北京市";
+	/**
+	 * EndBug
+	 */
 	public String city = "市";
 	public String couny = "区";
 
