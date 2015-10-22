@@ -103,6 +103,11 @@ public class FragmentFangkuan extends Fragment {
 						zijin.setShijian(jsonObject2.getString("dateline"));
 						zijin.setJine(jsonObject2.getString("s_amount"));
 						zijin.setCid(jsonObject2.getString("id"));
+						/**
+						 * 功能添加Start 需求编号XQ1
+						 */
+						zijin.setAgree_fangkuan(jsonObject2.getString("agree_fangkuan"));
+						//功能添加End
 						String status = jsonObject2.getString("status");
 
 						if (status.equals("200")) {

@@ -31,6 +31,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.tianshijie1.application.MyApplication;
+import com.example.tianshijie1.util.CToast;
 import com.example.tianshijie1.util.PostUtil;
 import com.umeng.analytics.MobclickAgent;
 
@@ -175,6 +176,19 @@ public class ZhuceActivity extends Activity {
 							PostUtil postUtil = new PostUtil();
 							String url1 = "http://wap.tianshijie.com.cn/appuser/sendmobilemessage";
 							String result = postUtil.DoPostNew(pairList, url1);
+							/**
+							 * BugStart
+							 * Bug编号：BUG2
+							 * Bug描述：在有网络链接的情况下进入注册页面，然后此时切断所有网络连接，点击获取验证码
+							 * 			会因为没有网络获取不到json数据产生nullpointer
+							 * 修复人：李超
+							 * 修复日期：2015-10-22
+							 */
+							if(result == null){
+								CToast.makeText(ZhuceActivity.this, "请检查网络链接", 3000).show();
+								return;
+							}
+							//BugEnd
 							Log.v("result", result);
 							try {
 								JSONObject jsonObject = new JSONObject(result);

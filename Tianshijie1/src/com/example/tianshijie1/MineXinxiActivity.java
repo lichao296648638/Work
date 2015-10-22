@@ -251,9 +251,9 @@ public class MineXinxiActivity extends Activity implements
                     @Override
                     public void onClick(View v) {
                         /**
-                         * StartBUG
+                         * BugStart
+                         * Bug编号：BUG1
                          * BUG描述：我的资料页面选取所在城市，默认北京情况下从县切换到市辖区，程序崩溃
-                         * BUG状态：已修复
                          * 修复日期：2015-10-21
                          * 修复人：李超
                          */
@@ -266,9 +266,7 @@ public class MineXinxiActivity extends Activity implements
                             str = jie;
                         }
                          str = str.substring(0, str.length() - 1);
-                        /**
-                         *EndBug
-                         */
+                        //EndBug
                         tv_city.setText(str);
                         dbHelper = new DBManager(MineXinxiActivity.this);
                         dbHelper.openDatabase();

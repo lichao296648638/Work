@@ -41,6 +41,7 @@ import com.example.tianshijie1.fragement.fragment1.ReceiveBroadCast;
 import com.example.tianshijie1.shangla.PullToRefreshView;
 import com.example.tianshijie1.shangla.PullToRefreshView.OnFooterRefreshListener;
 import com.example.tianshijie1.shangla.PullToRefreshView.OnHeaderRefreshListener;
+import com.example.tianshijie1.util.CToast;
 import com.example.tianshijie1.util.PostUtil;
 
 public class fragment3 extends Fragment implements OnHeaderRefreshListener,
@@ -189,6 +190,19 @@ public class fragment3 extends Fragment implements OnHeaderRefreshListener,
 				PostUtil postUtil = new PostUtil();
 				String url1 = "http://wap.tianshijie.com.cn/appproject/index";
 				result = postUtil.DoPostNew(pairList, url1);
+				/**
+				 * BugStart
+				 * Bug编号：BUG3
+				 * Bug描述：在有网络链接的情况下进入科技金融→右上角“行”按钮页面，然后此时切断所有网络连接，点击社区
+				 * 			会因为没有网络获取不到json数据产生nullpointer
+				 * 修复人：李超
+				 * 修复日期：2015-10-22
+				 */
+				if(result == null){
+					CToast.makeText(getActivity(), "请检查网络链接", 3000).show();
+					return;
+				}
+				//BugEnd
 				Log.v("url", "1" + result);
 				try {
 					JSONObject jsonObject = new JSONObject(result);

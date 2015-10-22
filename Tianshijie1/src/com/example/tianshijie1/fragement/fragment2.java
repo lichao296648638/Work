@@ -41,6 +41,7 @@ import com.example.tianshijie1.fragement.fragment1.ReceiveBroadCast;
 import com.example.tianshijie1.shangla.PullToRefreshView;
 import com.example.tianshijie1.shangla.PullToRefreshView.OnFooterRefreshListener;
 import com.example.tianshijie1.shangla.PullToRefreshView.OnHeaderRefreshListener;
+import com.example.tianshijie1.util.CToast;
 import com.example.tianshijie1.util.PostUtil;
 
 public class fragment2 extends Fragment implements OnHeaderRefreshListener,
@@ -185,6 +186,14 @@ public class fragment2 extends Fragment implements OnHeaderRefreshListener,
 				PostUtil postUtil = new PostUtil();
 				String url1 = "http://wap.tianshijie.com.cn/appproject/index";
 				result = postUtil.DoPostNew(pairList, url1);
+				/**
+				 * BugStart
+				 * Bug编号：BUG3
+				 */
+				if(result == null){
+					return;
+				}
+				//BugEnd
 				Log.v("url", "1" + result);
 				try {
 					JSONObject jsonObject = new JSONObject(result);
