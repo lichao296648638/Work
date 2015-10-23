@@ -90,12 +90,18 @@
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
         </activity>
+        <!-- BugStart -->
+        <!-- Bug编号：BUG6 -->
+        <!-- Bug描述：在主页面和个人资料页面频繁切换后会内存溢出，该版App还有很多内存管理缺陷待解决 -->
+        <!-- 修复人：李超 -->
+        <!-- 修复日期：2015-10-23 -->
         <activity
             android:name="com.example.tianshijie1.MainActivity"
             android:label="@string/title_activity_choice_identity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" >
         </activity>
+        <!-- BugEnd -->
         <activity
             android:name="com.example.tianshijie1.ChoiceIdentityActivity"
             android:label="@string/title_activity_tfirst"
