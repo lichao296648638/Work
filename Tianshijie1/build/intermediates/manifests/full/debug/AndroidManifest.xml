@@ -93,6 +93,7 @@
         <activity
             android:name="com.example.tianshijie1.MainActivity"
             android:label="@string/title_activity_choice_identity"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait" >
         </activity>
         <activity

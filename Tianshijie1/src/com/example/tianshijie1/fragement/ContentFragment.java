@@ -68,6 +68,7 @@ import com.example.tianshijie1.lunbo.ImageAdapter;
 import com.example.tianshijie1.shangla.PullToRefreshView;
 import com.example.tianshijie1.shangla.PullToRefreshView.OnFooterRefreshListener;
 import com.example.tianshijie1.shangla.PullToRefreshView.OnHeaderRefreshListener;
+import com.example.tianshijie1.util.CToast;
 import com.example.tianshijie1.util.CustomProgressDialog;
 import com.example.tianshijie1.util.Jindu;
 import com.example.tianshijie1.util.LvHeightUtil;
@@ -722,6 +723,18 @@ public class ContentFragment extends Fragment implements
 						PostUtil postUtil = new PostUtil();
 						String url1 = "http://wap.tianshijie.com.cn/appproject/favorite";
 						result = postUtil.DoPostNew(pairList, url1);
+						/**
+						 * BugStart
+						 * Bug编号：BUG4
+						 * Bug描述：针对最初的BUG2和BUG3的统一处理，会因为没有网络获取不到数据数据产生nullpointer
+						 * 修复人：李超
+						 * 修复日期：2015-10-23
+						 */
+						if(result == null){
+							CToast.makeText(getActivity(), getActivity().getResources().getText(R.string.toast_error_network), 3000).show();
+							return;
+						}
+						//BugEnd
 						Log.v("url", "1" + result);
 						try {
 							JSONObject jsonObject = new JSONObject(result);
@@ -793,6 +806,18 @@ public class ContentFragment extends Fragment implements
 						PostUtil postUtil = new PostUtil();
 						String url1 = "http://wap.tianshijie.com.cn/appproject/favorite";
 						result = postUtil.DoPostNew(pairList, url1);
+						/**
+						 * BugStart
+						 * Bug编号：BUG4
+						 * Bug描述：针对最初的BUG2和BUG3的统一处理，会因为没有网络获取不到数据数据产生nullpointer
+						 * 修复人：李超
+						 * 修复日期：2015-10-23
+						 */
+						if(result == null){
+							CToast.makeText(getActivity(), getActivity().getResources().getText(R.string.toast_error_network), 3000).show();
+							return;
+						}
+						//BugEnd
 						Log.v("url", "1" + result);
 						try {
 							JSONObject jsonObject = new JSONObject(result);
@@ -859,6 +884,18 @@ public class ContentFragment extends Fragment implements
 				new Response.Listener<String>() {
 					@Override
 					public void onResponse(String response) {
+						/**
+						 * BugStart
+						 * Bug编号：BUG4
+						 * Bug描述：针对最初的BUG2和BUG3的统一处理，会因为没有网络获取不到数据数据产生nullpointer
+						 * 修复人：李超
+						 * 修复日期：2015-10-23
+						 */
+						if(response == null){
+							CToast.makeText(getActivity(), getActivity().getResources().getText(R.string.toast_error_network), 3000).show();
+							return;
+						}
+						//BugEnd
 						Log.d("TAG", response);
 						try {
 							JSONObject jsonObject = new JSONObject(response);
@@ -1081,6 +1118,18 @@ public class ContentFragment extends Fragment implements
 				new Response.Listener<String>() {
 					@Override
 					public void onResponse(String response) {
+						/**
+						 * BugStart
+						 * Bug编号：BUG4
+						 * Bug描述：针对最初的BUG2和BUG3的统一处理，会因为没有网络获取不到数据数据产生nullpointer
+						 * 修复人：李超
+						 * 修复日期：2015-10-23
+						 */
+						if(response == null){
+							CToast.makeText(getActivity(), getActivity().getResources().getText(R.string.toast_error_network), 3000).show();
+							return;
+						}
+						//BugEnd
 						Log.d("TAG", response);
 						try {
 							JSONObject jsonObject = new JSONObject(response);
@@ -1165,8 +1214,16 @@ public class ContentFragment extends Fragment implements
 	public void onStop() {
 		// TODO Auto-generated method stub
 		super.onStop();
-		autoGallery.cancel();
-		autoGallerybe = false;
+////////BugStart////////
+//		Bug编号：BUG8
+//		Bug描述：未能考虑到该对象为null的情况，可能会导致空指针
+//		修复人：李超
+//		修复时间：2015-10-23
+		if(autoGallery != null){
+			autoGallery.cancel();
+		}
+////////BugEnd////////
+			autoGallerybe = false;
 	}
 
 	@Override

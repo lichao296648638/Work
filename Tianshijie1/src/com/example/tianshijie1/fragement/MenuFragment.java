@@ -49,6 +49,7 @@ import com.example.tianshijie1.WebviewActivity;
 import com.example.tianshijie1.XiangmuguanliActivity;
 import com.example.tianshijie1.ZhanghuguanliActivity;
 import com.example.tianshijie1.application.AnimateFirstDisplayListener;
+import com.example.tianshijie1.util.CToast;
 import com.example.tianshijie1.util.PostUtil;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -330,6 +331,18 @@ public class MenuFragment extends Fragment {
 				new Response.Listener<String>() {
 					@Override
 					public void onResponse(String response) {
+						/**
+						 * BugStart
+						 * Bug编号：BUG4
+						 * Bug描述：针对最初的BUG2和BUG3的统一处理，会因为没有网络获取不到数据数据产生nullpointer
+						 * 修复人：李超
+						 * 修复日期：2015-10-23
+						 */
+						if(response == null){
+							CToast.makeText(getActivity(), getActivity().getResources().getText(R.string.toast_error_network), 3000).show();
+							return;
+						}
+						//BugEnd
 						try {
 							JSONObject jsonObject = new JSONObject(response);
 							if (response != null) {

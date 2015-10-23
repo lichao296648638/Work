@@ -199,7 +199,7 @@ public class fragment3 extends Fragment implements OnHeaderRefreshListener,
 				 * 修复日期：2015-10-22
 				 */
 				if(result == null){
-					CToast.makeText(getActivity(), "请检查网络链接", 3000).show();
+					CToast.makeText(getActivity(), getResources().getText(R.string.toast_error_network), 3000).show();
 					return;
 				}
 				//BugEnd

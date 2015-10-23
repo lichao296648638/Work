@@ -191,6 +191,7 @@
     <string name="title_activity_yugou_rengou">YugouRengouActivity</string>
     <string name="title_activity_zhanghuguanli">ZhanghuguanliActivity</string>
     <string name="title_activity_zhuce">ZhuceActivity</string>
+    <string name="toast_error_network">请检查网络链接</string>
     <!-- From: file:/E:/Android/AndroidStudioProjects/Work/Tianshijie1/res/values/umeng_common_strings.xml -->
     <eat-comment/>
     <string name="umeng_common_action_cancel">Cancel</string>

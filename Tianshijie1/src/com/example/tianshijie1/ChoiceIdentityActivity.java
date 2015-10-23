@@ -27,6 +27,7 @@ import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.Toast;
 
 import com.example.tianshijie1.application.MyApplication;
+import com.example.tianshijie1.util.CToast;
 import com.example.tianshijie1.util.PostUtil;
 import com.umeng.analytics.MobclickAgent;
 
@@ -145,6 +146,18 @@ public class ChoiceIdentityActivity extends Activity {
 						PostUtil postUtil = new PostUtil();
 						String url1 = "http://wap.tianshijie.com.cn/appuser/change_invest_type";
 						String result = postUtil.DoPostNew(pairList, url1);
+						/**
+						 * BugStart
+						 * Bug编号：BUG4
+						 * Bug描述：针对最初的BUG2和BUG3的统一处理，会因为没有网络获取不到数据数据产生nullpointer
+						 * 修复人：李超
+						 * 修复日期：2015-10-23
+						 */
+						if(result == null){
+							CToast.makeText(ChoiceIdentityActivity.this, getResources().getText(R.string.toast_error_network), 3000).show();
+							return;
+						}
+						//BugEnd
 						Log.v("url", "1" + result);
 						try {
 							JSONObject jsonObject = new JSONObject(result);

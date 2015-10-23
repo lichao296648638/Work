@@ -161,6 +161,18 @@ public class fragment1 extends Fragment implements OnHeaderRefreshListener,
 			}
 		});
 
+		/***
+		 * BugStart
+		 * Bug编号：BUG5
+		 * Bug描述：未判断数据为空时候的情况，导致空指针
+		 * 修复人：李超
+		 * 修复日期：2012-10-23
+		 */
+
+		if(MainActivity.TITLE == null){
+			return;
+		}
+		//BugEnd
 		mypost(MainActivity.TITLE);
 		Log.v("aaaa", MainActivity.TITLE);
 	}

@@ -50,16 +50,20 @@ import com.example.tianshijie1.application.AnimateFirstDisplayListener;
 import com.example.tianshijie1.application.MyApplication;
 import com.example.tianshijie1.bean.User;
 import com.example.tianshijie1.citygundong.CityPicker;
+import com.example.tianshijie1.util.CToast;
 import com.example.tianshijie1.util.FileUtil;
 import com.example.tianshijie1.util.PostUtil;
 import com.example.tianshijie1.util.UploadUtil;
 import com.example.tianshijie1.util.UploadUtil.OnUploadProcessListener;
 import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiscCache;
+import com.nostra13.universalimageloader.cache.disc.naming.HashCodeFileNameGenerator;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
+import com.nostra13.universalimageloader.cache.memory.impl.WeakMemoryCache;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.ImageLoadingListener;
+import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 import com.umeng.analytics.MobclickAgent;
@@ -128,6 +132,7 @@ public class MineXinxiActivity extends Activity implements
      */
     DisplayImageOptions options;
     private ImageLoadingListener animateFirstListener = new AnimateFirstDisplayListener();
+    ImageLoaderConfiguration config;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -147,8 +152,8 @@ public class MineXinxiActivity extends Activity implements
                         // 是否緩存都內存中
                 .cacheOnDisc(true)
                         // 是否緩存到sd卡上
-                .bitmapConfig(Bitmap.Config.RGB_565)
                 .displayer(new RoundedBitmapDisplayer(360, false)).build();
+
         init();
     }
 
@@ -299,6 +304,18 @@ public class MineXinxiActivity extends Activity implements
                                 PostUtil postUtil = new PostUtil();
                                 String url1 = "http://wap.tianshijie.com.cn/appuser/update";
                                 result = postUtil.DoPostNew(pairList, url1);
+                                /**
+                                 * BugStart
+                                 * Bug编号：BUG4
+                                 * Bug描述：针对最初的BUG2和BUG3的统一处理，会因为没有网络获取不到数据数据产生nullpointer
+                                 * 修复人：李超
+                                 * 修复日期：2015-10-23
+                                 */
+                                if(result == null){
+                                    CToast.makeText(MineXinxiActivity.this, getResources().getText(R.string.toast_error_network), 3000).show();
+                                    return;
+                                }
+                                //BugEnd
                                 Log.v("url", "1" + result);
 
                                 try {
@@ -437,6 +454,18 @@ public class MineXinxiActivity extends Activity implements
                                 PostUtil postUtil = new PostUtil();
                                 String url1 = "http://wap.tianshijie.com.cn/appuser/update";
                                 result = postUtil.DoPostNew(pairList, url1);
+                                /**
+                                 * BugStart
+                                 * Bug编号：BUG4
+                                 * Bug描述：针对最初的BUG2和BUG3的统一处理，会因为没有网络获取不到数据数据产生nullpointer
+                                 * 修复人：李超
+                                 * 修复日期：2015-10-23
+                                 */
+                                if(result == null){
+                                    CToast.makeText(MineXinxiActivity.this, getResources().getText(R.string.toast_error_network), 3000).show();
+                                    return;
+                                }
+                                //BugEnd
                                 Log.v("url", "1" + result);
 
                                 try {
@@ -476,6 +505,18 @@ public class MineXinxiActivity extends Activity implements
                                 PostUtil postUtil = new PostUtil();
                                 String url1 = "http://wap.tianshijie.com.cn/appuser/update";
                                 result = postUtil.DoPostNew(pairList, url1);
+                                /**
+                                 * BugStart
+                                 * Bug编号：BUG4
+                                 * Bug描述：针对最初的BUG2和BUG3的统一处理，会因为没有网络获取不到数据数据产生nullpointer
+                                 * 修复人：李超
+                                 * 修复日期：2015-10-23
+                                 */
+                                if(result == null){
+                                    CToast.makeText(MineXinxiActivity.this, getResources().getText(R.string.toast_error_network), 3000).show();
+                                    return;
+                                }
+                                //BugEnd
                                 Log.v("url", "1" + result);
 
                                 try {
@@ -599,6 +640,18 @@ public class MineXinxiActivity extends Activity implements
                 PostUtil postUtil = new PostUtil();
                 String url1 = "http://wap.tianshijie.com.cn/appuser/login";
                 result = postUtil.DoPostNew(pairList, url1);
+                /**
+                 * BugStart
+                 * Bug编号：BUG4
+                 * Bug描述：针对最初的BUG2和BUG3的统一处理，会因为没有网络获取不到数据数据产生nullpointer
+                 * 修复人：李超
+                 * 修复日期：2015-10-23
+                 */
+                if(result == null){
+                    CToast.makeText(MineXinxiActivity.this, getResources().getText(R.string.toast_error_network), 3000).show();
+                    return;
+                }
+                //BugEnd
                 Log.v("url", "1" + result);
 
                 try {
@@ -803,6 +856,7 @@ public class MineXinxiActivity extends Activity implements
                     } else if (invest_type == 2) {
                         tv_shenfen.setText("投资者");
                     }
+
                     imageLoader = ImageLoader.getInstance();
                     imageLoader.displayImage(
                             MainActivity.PJURl + user.getUser_img(), iv_touxiang,
@@ -925,9 +979,13 @@ public class MineXinxiActivity extends Activity implements
         }
 
     }
-
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-
+//////BugStart//////
+//    Bug编号：BUG7
+//    Bug描述：原代码采用keydown方式，未考虑到一直按住不松开的情况，这里改为keyup
+//    修复人：李超
+//    修复日期:2015-10-23
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+//////BugEnd//////
         if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
             // do something...
             Intent intent = new Intent();
@@ -938,4 +996,5 @@ public class MineXinxiActivity extends Activity implements
         }
         return super.onKeyDown(keyCode, event);
     }
+
 }

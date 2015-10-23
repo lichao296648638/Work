@@ -34,6 +34,7 @@ import com.example.tianshijie1.FindActivity.ReceiveBroadCast;
 import com.example.tianshijie1.adapter.MainlistAdapter;
 import com.example.tianshijie1.application.MyApplication;
 import com.example.tianshijie1.bean.Mingxingxiangmu;
+import com.example.tianshijie1.util.CToast;
 import com.example.tianshijie1.util.ListViewSwipeGesture;
 import com.example.tianshijie1.util.PostUtil;
 import com.umeng.analytics.MobclickAgent;
@@ -96,6 +97,18 @@ public class MineguanzhuActivity extends Activity {
 					PostUtil postUtil2 = new PostUtil();
 					String url2 = "http://wap.tianshijie.com.cn/appuser/my_project";
 					result = postUtil2.DoPostNew(pairList2, url2);
+					/**
+					 * BugStart
+					 * Bug编号：BUG4
+					 * Bug描述：针对最初的BUG2和BUG3的统一处理，会因为没有网络获取不到数据数据产生nullpointer
+					 * 修复人：李超
+					 * 修复日期：2015-10-23
+					 */
+					if(result == null){
+						CToast.makeText(MineguanzhuActivity.this, getResources().getText(R.string.toast_error_network), 3000).show();
+						return;
+					}
+					//BugEnd
 					Log.v("url", "1" + result);
 					try {
 						JSONObject jsonObject = new JSONObject(result);
@@ -207,6 +220,18 @@ public class MineguanzhuActivity extends Activity {
 				PostUtil postUtil2 = new PostUtil();
 				String url2 = "http://wap.tianshijie.com.cn/appuser/my_project";
 				result = postUtil2.DoPostNew(pairList2, url2);
+				/**
+				 * BugStart
+				 * Bug编号：BUG4
+				 * Bug描述：针对最初的BUG2和BUG3的统一处理，会因为没有网络获取不到数据数据产生nullpointer
+				 * 修复人：李超
+				 * 修复日期：2015-10-23
+				 */
+				if(result == null){
+					CToast.makeText(MineguanzhuActivity.this, getResources().getText(R.string.toast_error_network), 3000).show();
+					return;
+				}
+				//BugEnd
 				Log.v("url", "1" + result);
 				try {
 					JSONObject jsonObject = new JSONObject(result);
@@ -305,11 +330,24 @@ public class MineguanzhuActivity extends Activity {
 						PostUtil postUtil2 = new PostUtil();
 						String url2 = "http://wap.tianshijie.com.cn/appproject/favorite";
 						result = postUtil2.DoPostNew(pairList2, url2);
+						/**
+						 * BugStart
+						 * Bug编号：BUG4
+						 * Bug描述：针对最初的BUG2和BUG3的统一处理，会因为没有网络获取不到数据数据产生nullpointer
+						 * 修复人：李超
+						 * 修复日期：2015-10-23
+						 */
+						if(result == null){
+							CToast.makeText(MineguanzhuActivity.this, getResources().getText(R.string.toast_error_network), 3000).show();
+							return;
+						}
+						//BugEnd
 						Log.v("san", "1" + result);
 						Intent intent = new Intent(); // Itent就是我们要发送的内容
 						intent.setAction("shuaxin"); // 设置你这个广播的action
 						intent.putExtra("pid", id);
 						sendBroadcast(intent); // 发送广播
+
 						try {
 							JSONObject jsonObject = new JSONObject(result);
 						} catch (JSONException e) {

@@ -45,6 +45,7 @@
     <string name="title_activity_city_choise">CityChoiseActivity</string>
     <string name="title_activity_pinglun">PinglunActivity</string>
     <string name="title_activity_web_yibao">WebYibaoActivity</string>
+    <string name="toast_error_network">请检查网络链接</string>
 
     <style name="CustomDialog" parent="@android:style/Theme.Dialog">
         <item name="android:windowFrame">@null</item>

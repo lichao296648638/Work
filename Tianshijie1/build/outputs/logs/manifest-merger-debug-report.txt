@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:2:1-249:12
+ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:2:1-250:12
 	package
 		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:3:5-38
 	android:versionName
@@ -56,7 +56,7 @@ ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml
 	android:name
 		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:30:22-66
 application
-ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:37:5-244:19
+ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:37:5-245:19
 MERGED from [Work:actionbarsherlock:unspecified] E:\Android\AndroidStudioProjects\Work\Tianshijie1\build\intermediates\exploded-aar\Work\actionbarsherlock\unspecified\AndroidManifest.xml:11:5-20
 	android:label
 		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:41:9-41
@@ -145,256 +145,258 @@ ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml
 	android:name
 		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:87:13-66
 activity#com.example.tianshijie1.MainActivity
-ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:91:9-95:20
+ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:91:9-96:20
 	android:screenOrientation
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:94:13-49
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:95:13-49
 	android:label
 		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:93:13-67
+	android:launchMode
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:94:13-44
 	android:name
 		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:92:13-64
 activity#com.example.tianshijie1.ChoiceIdentityActivity
-ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:96:9-100:20
+ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:97:9-101:20
 	android:screenOrientation
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:99:13-49
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:100:13-49
 	android:label
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:98:13-58
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:99:13-58
 	android:name
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:97:13-74
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:98:13-74
 activity#com.example.tianshijie1.ZhuceActivity
-ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:101:9-105:20
+ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:102:9-106:20
 	android:screenOrientation
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:104:13-49
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:105:13-49
 	android:label
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:103:13-57
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:104:13-57
 	android:name
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:102:13-65
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:103:13-65
 activity#com.example.tianshijie1.LoginActivity
-ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:106:9-110:20
+ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:107:9-111:20
 	android:screenOrientation
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:109:13-49
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:110:13-49
 	android:label
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:108:13-57
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:109:13-57
 	android:name
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:107:13-65
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:108:13-65
 activity#com.example.tianshijie1.Forgetpassword1Activity
-ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:111:9-115:20
+ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:112:9-116:20
 	android:screenOrientation
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:114:13-49
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:115:13-49
 	android:label
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:113:13-67
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:114:13-67
 	android:name
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:112:13-75
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:113:13-75
 activity#com.example.tianshijie1.ForgetPassword2Activity
-ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:116:9-120:20
+ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:117:9-121:20
 	android:screenOrientation
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:119:13-49
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:120:13-49
 	android:label
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:118:13-68
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:119:13-68
 	android:name
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:117:13-75
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:118:13-75
 activity#com.example.tianshijie1.XiangmuListActivity
-ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:121:9-125:20
+ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:122:9-126:20
 	android:screenOrientation
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:124:13-49
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:125:13-49
 	android:label
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:123:13-64
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:124:13-64
 	android:name
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:122:13-71
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:123:13-71
 activity#com.example.tianshijie1.XiangqingFeishitiActivity
-ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:126:9-131:20
+ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:127:9-132:20
 	android:screenOrientation
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:130:13-49
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:131:13-49
 	android:label
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:129:13-70
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:130:13-70
 	android:configChanges
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:128:13-63
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:129:13-63
 	android:name
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:127:13-77
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:128:13-77
 activity#com.example.tianshijie1.MineguanzhuActivity
-ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:132:9-136:20
+ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:133:9-137:20
 	android:screenOrientation
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:135:13-49
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:136:13-49
 	android:label
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:134:13-63
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:135:13-63
 	android:name
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:133:13-71
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:134:13-71
 activity#com.example.tianshijie1.MineXinxiActivity
-ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:137:9-141:20
+ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:138:9-142:20
 	android:screenOrientation
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:140:13-49
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:141:13-49
 	android:label
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:139:13-62
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:140:13-62
 	android:name
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:138:13-69
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:139:13-69
 activity#com.example.tianshijie1.MineXinxiChangeActivity
-ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:142:9-146:20
+ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:143:9-147:20
 	android:screenOrientation
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:145:13-49
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:146:13-49
 	android:label
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:144:13-69
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:145:13-69
 	android:name
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:143:13-75
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:144:13-75
 activity#com.example.tianshijie1.XiangmuguanliActivity
-ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:147:9-151:20
+ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:148:9-152:20
 	android:screenOrientation
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:150:13-49
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:151:13-49
 	android:label
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:149:13-65
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:150:13-65
 	android:name
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:148:13-73
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:149:13-73
 activity#com.example.tianshijie1.YugouRengouActivity
-ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:152:9-156:20
+ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:153:9-157:20
 	android:screenOrientation
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:155:13-49
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:156:13-49
 	android:label
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:154:13-64
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:155:13-64
 	android:name
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:153:13-71
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:154:13-71
 activity#com.example.tianshijie1.FindActivity
-ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:157:9-161:20
+ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:158:9-162:20
 	android:screenOrientation
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:160:13-49
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:161:13-49
 	android:label
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:159:13-56
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:160:13-56
 	android:name
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:158:13-64
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:159:13-64
 activity#com.example.tianshijie1.XiangmushitiActivity
-ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:162:9-167:20
+ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:163:9-168:20
 	android:screenOrientation
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:166:13-49
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:167:13-49
 	android:label
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:165:13-64
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:166:13-64
 	android:configChanges
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:164:13-63
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:165:13-63
 	android:name
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:163:13-72
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:164:13-72
 activity#com.example.tianshijie1.MineShezhiActivity
-ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:168:9-172:20
+ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:169:9-173:20
 	android:screenOrientation
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:171:13-49
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:172:13-49
 	android:label
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:170:13-63
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:171:13-63
 	android:name
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:169:13-70
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:170:13-70
 activity#com.example.tianshijie1.MinePasswordChangeActivity
-ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:173:9-177:20
+ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:174:9-178:20
 	android:screenOrientation
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:176:13-49
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:177:13-49
 	android:label
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:175:13-72
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:176:13-72
 	android:name
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:174:13-78
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:175:13-78
 activity#com.example.tianshijie1.MineYjfkActivity
-ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:178:9-182:20
+ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:179:9-183:20
 	android:screenOrientation
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:181:13-49
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:182:13-49
 	android:label
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:180:13-61
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:181:13-61
 	android:name
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:179:13-68
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:180:13-68
 activity#com.example.tianshijie1.AboutusActivity
-ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:183:9-187:20
+ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:184:9-188:20
 	android:screenOrientation
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:186:13-49
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:187:13-49
 	android:label
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:185:13-59
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:186:13-59
 	android:name
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:184:13-67
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:185:13-67
 activity#com.example.tianshijie1.WebviewActivity
-ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:188:9-192:20
+ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:189:9-193:20
 	android:screenOrientation
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:191:13-49
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:192:13-49
 	android:label
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:190:13-59
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:191:13-59
 	android:name
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:189:13-67
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:190:13-67
 activity#com.example.tianshijie1.ZhanghuguanliActivity
-ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:193:9-197:20
+ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:194:9-198:20
 	android:screenOrientation
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:196:13-49
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:197:13-49
 	android:label
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:195:13-65
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:196:13-65
 	android:name
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:194:13-73
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:195:13-73
 activity#com.example.tianshijie1.MyMessageActivity
-ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:198:9-202:20
+ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:199:9-203:20
 	android:screenOrientation
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:201:13-49
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:202:13-49
 	android:label
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:200:13-62
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:201:13-62
 	android:name
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:199:13-69
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:200:13-69
 activity#com.example.tianshijie1.YuetanActivity
-ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:203:9-207:20
+ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:204:9-208:20
 	android:screenOrientation
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:206:13-49
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:207:13-49
 	android:label
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:205:13-58
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:206:13-58
 	android:name
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:204:13-66
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:205:13-66
 activity#com.example.tianshijie1.FabuxiangmuActivity
-ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:208:9-212:20
+ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:209:9-213:20
 	android:screenOrientation
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:211:13-49
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:212:13-49
 	android:label
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:210:13-63
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:211:13-63
 	android:name
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:209:13-71
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:210:13-71
 activity#com.example.tianshijie1.DaohangActivity
-ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:213:9-217:20
+ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:214:9-218:20
 	android:screenOrientation
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:216:13-49
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:217:13-49
 	android:label
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:215:13-59
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:216:13-59
 	android:name
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:214:13-67
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:215:13-67
 activity#com.example.tianshijie1.CityChoiseActivity
-ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:218:9-223:20
+ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:219:9-224:20
 	android:screenOrientation
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:221:13-49
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:222:13-49
 	android:label
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:220:13-63
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:221:13-63
 	android:windowSoftInputMode
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:222:13-52
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:223:13-52
 	android:name
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:219:13-70
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:220:13-70
 activity#com.example.tianshijie1.PinglunActivity
-ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:224:9-228:20
+ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:225:9-229:20
 	android:screenOrientation
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:227:13-49
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:228:13-49
 	android:label
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:226:13-59
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:227:13-59
 	android:name
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:225:13-67
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:226:13-67
 activity#com.example.tianshijie1.WebYibaoActivity
-ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:229:9-233:20
+ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:230:9-234:20
 	android:screenOrientation
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:232:13-49
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:233:13-49
 	android:label
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:231:13-61
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:232:13-61
 	android:name
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:230:13-68
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:231:13-68
 activity#com.example.tianshijie1.IdcordChangeActivity
-ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:234:9-238:20
+ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:235:9-239:20
 	android:screenOrientation
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:237:13-49
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:238:13-49
 	android:label
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:236:13-65
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:237:13-65
 	android:name
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:235:13-72
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:236:13-72
 activity#com.example.tianshijie1.WuwangActivity
-ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:239:9-243:20
+ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:240:9-244:20
 	android:screenOrientation
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:242:13-49
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:243:13-49
 	android:label
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:241:13-58
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:242:13-58
 	android:name
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:240:13-66
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:241:13-66
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:246:5-79
+ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:247:5-79
 	android:name
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:246:22-76
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:247:22-76
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:247:5-81
+ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:248:5-81
 	android:name
-		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:247:22-78
+		ADDED from E:\Android\AndroidStudioProjects\Work\Tianshijie1\AndroidManifest.xml:248:22-78
