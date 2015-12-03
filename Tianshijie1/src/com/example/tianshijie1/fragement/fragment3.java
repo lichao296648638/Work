@@ -42,6 +42,7 @@ import com.example.tianshijie1.shangla.PullToRefreshView;
 import com.example.tianshijie1.shangla.PullToRefreshView.OnFooterRefreshListener;
 import com.example.tianshijie1.shangla.PullToRefreshView.OnHeaderRefreshListener;
 import com.example.tianshijie1.util.CToast;
+import com.example.tianshijie1.util.LvHeightUtil;
 import com.example.tianshijie1.util.PostUtil;
 
 public class fragment3 extends Fragment implements OnHeaderRefreshListener,
@@ -58,7 +59,16 @@ public class fragment3 extends Fragment implements OnHeaderRefreshListener,
 	Handler handler;
 	int i = 1;
 	private ReceiveBroadCast receiveBroadCast;
-
+	/**
+	 * Bug12Start
+	 * Bug编号：Bug12
+	 * Bug描述：点击首页科技进入的页面，上拉无反应
+	 * 修复人：李超
+	 * 修复时间：2015-12-02
+	 */
+	private int i_StartIndex = 0;
+	private boolean b_Isinitdata = false;
+	//Bug12End
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -95,11 +105,29 @@ public class fragment3 extends Fragment implements OnHeaderRefreshListener,
 				case 1:
 					ll_meiyou.setVisibility(View.VISIBLE);
 					tv_meiyou.setVisibility(View.GONE);
-					mainlistAdapter = new MainlistAdapter(getActivity(),
-							listMingxingxiangmus, 0);
-					lv_xiangmu.setAdapter(mainlistAdapter);
-					mainlistAdapter.notifyDataSetInvalidated();
-
+					/**
+					 * Bug12Start
+					 * Bug编号：Bug12
+					 * Bug描述：点击首页科技进入的页面，上拉无反应
+					 * 修复人：李超
+					 * 修复时间：2015-12-02
+					 */
+					if (!b_Isinitdata) {
+						mainlistAdapter = new MainlistAdapter(getActivity(),
+								listMingxingxiangmus, 0);
+						lv_xiangmu.setAdapter(mainlistAdapter);
+						b_Isinitdata = true;
+					} else {
+						mainlistAdapter.notifyDataSetInvalidated();
+					}
+					if (mainlistAdapter.getCount() <= 3) {
+						lv_xiangmu.setSelection(mainlistAdapter.getCount() - 3);
+					} else {
+						lv_xiangmu.setSelection(mainlistAdapter.getCount() - 10);
+					}
+					mPullToRefreshView.onFooterRefreshComplete();
+					LvHeightUtil.setListViewHeightBasedOnChildren(lv_xiangmu);
+					//Bug12End
 					break;
 				case 2:
 					ll_meiyou.setVisibility(View.GONE);
@@ -182,6 +210,16 @@ public class fragment3 extends Fragment implements OnHeaderRefreshListener,
 				pairList.add(pair1);
 				pairList.add(pair2);
 				pairList.add(pair3);
+				/**
+				 * Bug12Start
+				 * Bug编号：Bug12
+				 * Bug描述：点击首页科技进入的页面，上拉无反应
+				 * 修复人：李超
+				 * 修复时间：2015-12-02
+				 */
+				NameValuePair pair5 = new BasicNameValuePair("start", String.valueOf(i_StartIndex));
+				pairList.add(pair5);
+				//Bug12End
 				if (ContentFragment.cityid != null) {
 					NameValuePair pair4 = new BasicNameValuePair("area",
 							ContentFragment.cityid);
@@ -206,47 +244,69 @@ public class fragment3 extends Fragment implements OnHeaderRefreshListener,
 				Log.v("url", "1" + result);
 				try {
 					JSONObject jsonObject = new JSONObject(result);
-					JSONArray jsonArray = jsonObject.getJSONArray("data");
+					/**
+					 * Bug12Start
+					 * Bug编号：Bug12
+					 * Bug描述：点击首页科技进入的页面，上拉无反应
+					 * 修复人：李超
+					 * 修复时间：2015-12-02
+					 */
+					JSONArray jsonArray;
+					if (jsonObject.get("data").equals("") || jsonObject.get("data") == null) {
+						if (jsonObject.get("info").equals("暂无项目信息")) {
+							if (listMingxingxiangmus.size() <= 0) {
+								Message message = new Message();
+								message.what = 2;
+								handler.sendMessage(message);
+							} else {
+								Message message = new Message();
+								message.what = 1;
+								handler.sendMessage(message);
+							}
+						}
+					}else{
+						jsonArray = jsonObject.getJSONArray("data");
+						for (int i = 0; i < jsonArray.length(); i++) {
+							muMingxingxiangmu = new Mingxingxiangmu();
+							JSONObject jsonObject2 = jsonArray.getJSONObject(i);
+							muMingxingxiangmu.setImage(MainActivity.PJURl
+									+ jsonObject2.getString("image"));
+							muMingxingxiangmu.setCity_val(jsonObject2
+									.getString("city_val"));
+							muMingxingxiangmu.setCollect(jsonObject2
+									.getString("collect"));
+							muMingxingxiangmu.setCopy_price(jsonObject2
+									.getString("copy_price"));
+							muMingxingxiangmu.setStatus_val(jsonObject2
+									.getString("status_val"));
+							muMingxingxiangmu
+									.setName(jsonObject2.getString("name"));
+							muMingxingxiangmu.setCity_val(jsonObject2
+									.getString("city_val"));
+							muMingxingxiangmu.setSy_time(jsonObject2
+									.getString("sy_time"));
+							muMingxingxiangmu.setCopy_number(jsonObject2
+									.getString("copy_number"));
+							muMingxingxiangmu.setLoan_amount(jsonObject2
+									.getString("loan_amount"));
+							muMingxingxiangmu.setJindu(jsonObject2
+									.getString("jindu"));
+							muMingxingxiangmu.setId(jsonObject2.getString("id"));
+							muMingxingxiangmu.setVersion(jsonObject2
+									.getString("version"));
+							muMingxingxiangmu.setIs_sc(jsonObject2
+									.getString("is_sc"));
+							muMingxingxiangmu.setSummary(jsonObject2
+									.getString("summary"));
+							listMingxingxiangmus.add(muMingxingxiangmu);
+							i_StartIndex++;
+						}
 
-					for (int i = 0; i < jsonArray.length(); i++) {
-						muMingxingxiangmu = new Mingxingxiangmu();
-						JSONObject jsonObject2 = jsonArray.getJSONObject(i);
-						muMingxingxiangmu.setImage(MainActivity.PJURl
-								+ jsonObject2.getString("image"));
-						muMingxingxiangmu.setCity_val(jsonObject2
-								.getString("city_val"));
-						muMingxingxiangmu.setCollect(jsonObject2
-								.getString("collect"));
-						muMingxingxiangmu.setCopy_price(jsonObject2
-								.getString("copy_price"));
-						muMingxingxiangmu.setStatus_val(jsonObject2
-								.getString("status_val"));
-						muMingxingxiangmu
-								.setName(jsonObject2.getString("name"));
-						muMingxingxiangmu.setCity_val(jsonObject2
-								.getString("city_val"));
-						muMingxingxiangmu.setSy_time(jsonObject2
-								.getString("sy_time"));
-						muMingxingxiangmu.setCopy_number(jsonObject2
-								.getString("copy_number"));
-						muMingxingxiangmu.setLoan_amount(jsonObject2
-								.getString("loan_amount"));
-						muMingxingxiangmu.setJindu(jsonObject2
-								.getString("jindu"));
-						muMingxingxiangmu.setId(jsonObject2.getString("id"));
-						muMingxingxiangmu.setVersion(jsonObject2
-								.getString("version"));
-						muMingxingxiangmu.setIs_sc(jsonObject2
-								.getString("is_sc"));
-						muMingxingxiangmu.setSummary(jsonObject2
-								.getString("summary"));
-
-						listMingxingxiangmus.add(muMingxingxiangmu);
 						Message message = new Message();
 						message.what = 1;
 						handler.sendMessage(message);
 					}
-
+					//Bug12End
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block
 					Message message = new Message();

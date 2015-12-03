@@ -25,6 +25,16 @@
             android:background="#ffffff"
             android:orientation="vertical" >
 
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
             <ListView
                 android:id="@+id/lv_xiangmu"
                 android:layout_width="match_parent"
@@ -38,6 +48,8 @@
                 android:headerDividersEnabled="false"
                 android:scrollbars="none"
                 android:smoothScrollbar="true" />
+                </LinearLayout>
+            </ScrollView>
         </com.example.tianshijie1.shangla.PullToRefreshView>
     </LinearLayout>
 

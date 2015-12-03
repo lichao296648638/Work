@@ -156,6 +156,7 @@ public class XiangmushitiActivity extends Activity implements
 					imageLoader2.displayImage(muMingxingxiangmu.getBanner(),
 							iv_banner2, options, animateFirstListener);
 					Log.v("mu", muMingxingxiangmu.getStatus_val());
+
 					if (muMingxingxiangmu.getStatus_val().equals("预热中")) {
 						tv_rengou.setText("预购");
 						tv_yichou.setText("已筹："
@@ -175,27 +176,52 @@ public class XiangmushitiActivity extends Activity implements
 						iv_rongzizhuangtai2
 								.setBackgroundResource(R.drawable.rongcheng);
 					}
+					/**
+					 * Bug11Start
+					 * Bug编号:Bug11
+					 * Bug描述：项目众筹中和预热时间为0时，认购和约谈仍可点击
+					 * 修复人：李超
+					 * 修复时间：2015-11-30
+					 */
+					if ((muMingxingxiangmu.getStatus_val().equals("预热中") ||
+							muMingxingxiangmu.getStatus_val().equals("众筹中"))
+									&& muMingxingxiangmu.getSy_time().equals("0")) {
+						tv_rengou.setTextColor(Color
+								.parseColor("#d1d1d1"));
+						tv_yuetan.setTextColor(Color
+								.parseColor("#d1d1d1"));
+					}
+
 					tv_rengou.setOnClickListener(new OnClickListener() {
 
 						@Override
 						public void onClick(View v) {
 							// TODO Auto-generated method stub
-							if (muMingxingxiangmu.getStatus_val().equals("预热中")) {
+							if (muMingxingxiangmu.getStatus_val().equals("预热中")  && !muMingxingxiangmu.getSy_time().equals("0")) {
 								Intent intent = new Intent();
 								intent.setClass(XiangmushitiActivity.this,
 										YugouRengouActivity.class);
 								intent.putExtra("type", "预购");
 								intent.putExtra("muMing", muMingxingxiangmu);
 								startActivity(intent);
+							}else if(muMingxingxiangmu.getStatus_val().equals("预热中")  && muMingxingxiangmu.getSy_time().equals("0")){
+
+								Toast.makeText(XiangmushitiActivity.this,
+										"项目众筹已到期", Toast.LENGTH_LONG).show();
 							}
-							if (muMingxingxiangmu.getStatus_val().equals("众筹中")) {
+							if (muMingxingxiangmu.getStatus_val().equals("众筹中")  && !muMingxingxiangmu.getSy_time().equals("0")) {
 								Intent intent = new Intent();
 								intent.setClass(XiangmushitiActivity.this,
 										YugouRengouActivity.class);
 								intent.putExtra("type", "认购");
 								intent.putExtra("muMing", muMingxingxiangmu);
 								startActivity(intent);
+							}else if(muMingxingxiangmu.getStatus_val().equals("众筹中")  && muMingxingxiangmu.getSy_time().equals("0")){
+
+								Toast.makeText(XiangmushitiActivity.this,
+										"项目众筹已到期", Toast.LENGTH_LONG).show();
 							}
+							//Bug11End
 							if (muMingxingxiangmu.getStatus_val()
 									.equals("众筹完成")) {
 								tv_rengou.setTextColor(Color
@@ -335,7 +361,6 @@ public class XiangmushitiActivity extends Activity implements
 			}
 		}.start();
 		init();
-
 	}
 
 	private void init() {
@@ -492,14 +517,27 @@ public class XiangmushitiActivity extends Activity implements
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				if (!muMingxingxiangmu.getStatus_val().equals("众筹完成")) {
+				/**
+				 * Bug11Start
+				 * Bug编号:Bug11
+				 * Bug描述：项目众筹中和预热时间为0时，认购和约谈仍可点击
+				 * 修复人：李超
+				 * 修复时间：2015-11-30
+				 */
+				if (!muMingxingxiangmu.getStatus_val().equals("众筹完成") && !muMingxingxiangmu.getSy_time().equals("0")) {
 					Intent intent = new Intent();
 					intent.setClass(XiangmushitiActivity.this,
 							YuetanActivity.class);
 					intent.putExtra("pid", muMingxingxiangmu.getId());
 					intent.putExtra("uid", muMingxingxiangmu.getUser_id());
 					startActivity(intent);
+				}else if((muMingxingxiangmu.getStatus_val().equals("众筹中") || muMingxingxiangmu.getStatus_val().equals("预热中"))
+						&& muMingxingxiangmu.getSy_time().equals("0")){
+					Toast.makeText(XiangmushitiActivity.this, "项目众筹已到期",
+							Toast.LENGTH_SHORT).show();
 				}
+				//Bug11End
+
 			}
 		});
 		tv_pinglun.setOnClickListener(new OnClickListener() {

@@ -48,7 +48,6 @@ public class MainlistAdapter extends BaseAdapter {
 		this.leibie = leibie;
 		this.context = context;
 		this.list = list;
-
 		options = new DisplayImageOptions.Builder()
 				.showStubImage(R.drawable.zhanwei_background)// 设置图片在下载期间显示的图片
 				.showImageForEmptyUri(R.drawable.zhanwei_background)// 设置图片Uri为空或是错误的时候显示的图片
@@ -94,152 +93,181 @@ public class MainlistAdapter extends BaseAdapter {
 	@Override
 	public View getView(final int position, View convertView, ViewGroup parent) {
 		// TODO Auto-generated method stub
+		/**
+		 * 	XQ3Start
+		 * 	需求编号:XQ3
+		 * 	需求描述：优化主页热门项目加载速度
+		 * 	修复人：李超
+		 * 	修复日期：2015-11-24
+		 */
+		final ViewHolder holder;
+		if(convertView == null){
+			holder = new ViewHolder();
+			convertView = LayoutInflater.from(context).inflate(
+					R.layout.test_layout, null);
 
-		convertView = LayoutInflater.from(context).inflate(
-				R.layout.test_layout, null);
-
-		Yuanhuan yu_jindu = (Yuanhuan) convertView.findViewById(R.id.yu_jindu);
-		LinearLayout ll_collect = (LinearLayout) convertView
-				.findViewById(R.id.ll_collect);
-		if (leibie == 1) {
-			ll_collect.setVisibility(View.GONE);
-		}
-		TextView tv_name = (TextView) convertView.findViewById(R.id.tv_name);
-		TextView tv_xiangqing = (TextView) convertView
-				.findViewById(R.id.tv_xiangqing);
-		TextView tv_jindu = (TextView) convertView.findViewById(R.id.tv_jindu);
-		TextView tv_mubiao = (TextView) convertView
-				.findViewById(R.id.tv_mubiao);
-		TextView tv_qitou = (TextView) convertView.findViewById(R.id.tv_qitou);
-		TextView tv_shengyutime = (TextView) convertView
-				.findViewById(R.id.tv_shengyutime);
-		TextView tv_area = (TextView) convertView.findViewById(R.id.tv_area);
-		final TextView tv_listcollect = (TextView) convertView
-				.findViewById(R.id.tv_listcollect);
-		ImageView iv_image = (ImageView) convertView
-				.findViewById(R.id.iv_image);
-		ImageView iv_rongzizhuangtai = (ImageView) convertView
-				.findViewById(R.id.iv_rongzizhuangtai);
-		final ImageView iv_listcollect = (ImageView) convertView
-				.findViewById(R.id.iv_listcollect);
-		final Mingxingxiangmu mingxingxiangmu = list.get(position);
-		tv_name.setText(mingxingxiangmu.getName());
-		tv_xiangqing.setText(mingxingxiangmu.getSummary());
-		tv_jindu.setText(mingxingxiangmu.getJindu() + "%");
-		tv_mubiao.setText("目标：" + mingxingxiangmu.getLoan_amount() + "万");
-		tv_qitou.setText("起投：" + mingxingxiangmu.getCopy_price() + "万");
-		tv_shengyutime.setText("剩余：" + mingxingxiangmu.getSy_time() + "天");
-
-		if (leibie == 0) {
-			if (mingxingxiangmu.getIs_sc().equals("1")) {
-				iv_listcollect
-						.setBackgroundResource(R.drawable.collect_xuanzhong);
-			} else {
-				iv_listcollect.setBackgroundResource(R.drawable.xin_wxh_hui);
-
+			holder.yu_jindu = (Yuanhuan) convertView.findViewById(R.id.yu_jindu);
+			holder.ll_collect = (LinearLayout) convertView
+					.findViewById(R.id.ll_collect);
+			if (leibie == 1) {
+				holder.ll_collect.setVisibility(View.GONE);
 			}
+			holder.tv_name = (TextView) convertView.findViewById(R.id.tv_name);
+			holder.tv_xiangqing = (TextView) convertView
+					.findViewById(R.id.tv_xiangqing);
+			holder.tv_jindu = (TextView) convertView.findViewById(R.id.tv_jindu);
+			holder.tv_mubiao = (TextView) convertView
+					.findViewById(R.id.tv_mubiao);
+			holder.tv_qitou = (TextView) convertView.findViewById(R.id.tv_qitou);
+			holder.tv_shengyutime = (TextView) convertView
+					.findViewById(R.id.tv_shengyutime);
+			holder.tv_area = (TextView) convertView.findViewById(R.id.tv_area);
+			holder.tv_listcollect = (TextView) convertView
+					.findViewById(R.id.tv_listcollect);
+			holder.iv_image = (ImageView) convertView
+					.findViewById(R.id.iv_image);
+			holder.iv_rongzizhuangtai = (ImageView) convertView
+					.findViewById(R.id.iv_rongzizhuangtai);
+			holder.iv_listcollect = (ImageView) convertView
+					.findViewById(R.id.iv_listcollect);
+			final Mingxingxiangmu mingxingxiangmu = list.get(position);
+			holder.tv_name.setText(mingxingxiangmu.getName());
+			holder.tv_xiangqing.setText(mingxingxiangmu.getSummary());
+			holder.tv_jindu.setText(mingxingxiangmu.getJindu() + "%");
+			holder.tv_mubiao.setText("目标：" + mingxingxiangmu.getLoan_amount() + "万");
+			holder.tv_qitou.setText("起投：" + mingxingxiangmu.getCopy_price() + "万");
+			holder.tv_shengyutime.setText("剩余：" + mingxingxiangmu.getSy_time() + "天");
 
-		}
-
-		if (mingxingxiangmu.getStatus_val().equals("众筹中")) {
-			iv_rongzizhuangtai.setBackgroundResource(R.drawable.rongzhong);
-		}
-		if (mingxingxiangmu.getStatus_val().equals("众筹完成")) {
-			iv_rongzizhuangtai.setBackgroundResource(R.drawable.rongcheng);
-		}
-		ll_collect.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				new Thread() {
-					public void run() {
-						final List<NameValuePair> pairList = new ArrayList<NameValuePair>();
-						NameValuePair pair1 = new BasicNameValuePair("pid",
-								list.get(position).getId());
-						NameValuePair pair2 = new BasicNameValuePair("uid",
-								LoginActivity.UID);
-						pairList.add(pair1);
-						pairList.add(pair2);
-						PostUtil postUtil = new PostUtil();
-						String url1 = "http://wap.tianshijie.com.cn/appproject/favorite";
-						String result = postUtil.DoPostNew(pairList, url1);
-						/**
-						 * BugStart
-						 * Bug编号：BUG4
-						 * Bug描述：针对最初的BUG2和BUG3的统一处理，会因为没有网络获取不到数据数据产生nullpointer
-						 * 修复人：李超
-						 * 修复日期：2015-10-23
-						 */
-						if(result == null){
-							CToast.makeText(context, context.getResources().getText(R.string.toast_error_network), 3000).show();
-							return;
-						}
-						//BugEnd
-						Log.v("url", "1" + result);
-						try {
-							JSONObject jsonObject = new JSONObject(result);
-							String info = jsonObject.getString("info");
-							if (shou != 1) {
-								Intent intent = new Intent(); // Itent就是我们要发送的内容
-								intent.putExtra("pid", list.get(position)
-										.getId());
-								intent.setAction("shuaxin"); // 设置你这个广播的action
-								context.sendBroadcast(intent); // 发送广播
-							} else {
-								Intent intent = new Intent(); // Itent就是我们要发送的内容
-								intent.putExtra("pid", list.get(position)
-										.getId());
-								intent.setAction("shuaxinlist"); // 设置你这个广播的action
-								context.sendBroadcast(intent); // 发送广播
-							}
-							Looper.prepare();
-							Toast.makeText(context, info, Toast.LENGTH_SHORT)
-									.show();
-							Looper.loop();
-						} catch (JSONException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-
-					}
-				}.start();
-				ivcollect = Integer.parseInt(list.get(position).getIs_sc());
-				if (ivcollect == 0) {
-					iv_listcollect
+			if (leibie == 0) {
+				if (mingxingxiangmu.getIs_sc().equals("1")) {
+					holder.iv_listcollect
 							.setBackgroundResource(R.drawable.collect_xuanzhong);
-					int tvcollectnum = Integer.parseInt(tv_listcollect
-							.getText().toString());
-					tv_listcollect.setText(tvcollectnum + 1 + "");
-					list.get(position).setIs_sc("1");
-					list.get(position).setCollect(tvcollectnum + 1 + "");
-				} else if (ivcollect == 1) {
-					iv_listcollect
-							.setBackgroundResource(R.drawable.xin_wxh_hui);
-					int tvcollectnum = Integer.parseInt(tv_listcollect
-							.getText().toString());
-					tv_listcollect.setText(tvcollectnum - 1 + "");
-					list.get(position).setIs_sc("0");
-					list.get(position).setCollect(tvcollectnum - 1 + "");
-				}
-			}
-		});
-		tv_area.setText("地区：" + mingxingxiangmu.getCity_val());
-		tv_listcollect.setText(mingxingxiangmu.getCollect());
-		if (mingxingxiangmu.getJindu() != null) {
-			float sweep = Float.parseFloat(mingxingxiangmu.getJindu());
-			if (sweep > 100) {
-				sweep = 100;
-			}
-			yu_jindu.jindu = sweep;
-		}
+				} else {
+					holder.iv_listcollect.setBackgroundResource(R.drawable.xin_wxh_hui);
 
-		ImageLoader imageLoader = ImageLoader.getInstance();
-		imageLoader.displayImage(mingxingxiangmu.getImage(), iv_image, options,
-				animateFirstListener);
-		// 标记图片视图，注意不能放在上面
-		// 这是imageloader 中调用图片的方法
+				}
+
+			}
+
+			if (mingxingxiangmu.getStatus_val().equals("众筹中")) {
+				holder.iv_rongzizhuangtai.setBackgroundResource(R.drawable.rongzhong);
+			}
+			if (mingxingxiangmu.getStatus_val().equals("众筹完成")) {
+				holder.iv_rongzizhuangtai.setBackgroundResource(R.drawable.rongcheng);
+			}
+			holder.ll_collect.setOnClickListener(new OnClickListener() {
+
+				@Override
+				public void onClick(View v) {
+					// TODO Auto-generated method stub
+					new Thread() {
+						public void run() {
+							final List<NameValuePair> pairList = new ArrayList<NameValuePair>();
+							NameValuePair pair1 = new BasicNameValuePair("pid",
+									list.get(position).getId());
+							NameValuePair pair2 = new BasicNameValuePair("uid",
+									LoginActivity.UID);
+							pairList.add(pair1);
+							pairList.add(pair2);
+							PostUtil postUtil = new PostUtil();
+							String url1 = "http://wap.tianshijie.com.cn/appproject/favorite";
+							String result = postUtil.DoPostNew(pairList, url1);
+							/**
+							 * BugStart
+							 * Bug编号：BUG4
+							 * Bug描述：针对最初的BUG2和BUG3的统一处理，会因为没有网络获取不到数据数据产生nullpointer
+							 * 修复人：李超
+							 * 修复日期：2015-10-23
+							 */
+							if(result == null){
+								CToast.makeText(context, context.getResources().getText(R.string.toast_error_network), 3000).show();
+								return;
+							}
+							//BugEnd
+							Log.v("url", "1" + result);
+							try {
+								JSONObject jsonObject = new JSONObject(result);
+								String info = jsonObject.getString("info");
+								if (shou != 1) {
+									Intent intent = new Intent(); // Itent就是我们要发送的内容
+									intent.putExtra("pid", list.get(position)
+											.getId());
+									intent.setAction("shuaxin"); // 设置你这个广播的action
+									context.sendBroadcast(intent); // 发送广播
+								} else {
+									Intent intent = new Intent(); // Itent就是我们要发送的内容
+									intent.putExtra("pid", list.get(position)
+											.getId());
+									intent.setAction("shuaxinlist"); // 设置你这个广播的action
+									context.sendBroadcast(intent); // 发送广播
+								}
+								Looper.prepare();
+								Toast.makeText(context, info, Toast.LENGTH_SHORT)
+										.show();
+								Looper.loop();
+							} catch (JSONException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
+
+						}
+					}.start();
+					ivcollect = Integer.parseInt(list.get(position).getIs_sc());
+					if (ivcollect == 0) {
+						holder.iv_listcollect
+								.setBackgroundResource(R.drawable.collect_xuanzhong);
+						int tvcollectnum = Integer.parseInt(holder.tv_listcollect
+								.getText().toString());
+						holder.tv_listcollect.setText(tvcollectnum + 1 + "");
+						list.get(position).setIs_sc("1");
+						list.get(position).setCollect(tvcollectnum + 1 + "");
+					} else if (ivcollect == 1) {
+						holder.iv_listcollect
+								.setBackgroundResource(R.drawable.xin_wxh_hui);
+						int tvcollectnum = Integer.parseInt(holder.tv_listcollect
+								.getText().toString());
+						holder.tv_listcollect.setText(tvcollectnum - 1 + "");
+						list.get(position).setIs_sc("0");
+						list.get(position).setCollect(tvcollectnum - 1 + "");
+					}
+				}
+			});
+			holder.tv_area.setText("地区：" + mingxingxiangmu.getCity_val());
+			holder.tv_listcollect.setText(mingxingxiangmu.getCollect());
+			if (mingxingxiangmu.getJindu() != null) {
+				float sweep = Float.parseFloat(mingxingxiangmu.getJindu());
+				if (sweep > 100) {
+					sweep = 100;
+				}
+				holder.yu_jindu.jindu = sweep;
+			}
+
+			ImageLoader imageLoader = ImageLoader.getInstance();
+			imageLoader.displayImage(mingxingxiangmu.getImage(), holder.iv_image, options,
+					animateFirstListener);
+			// 标记图片视图，注意不能放在上面
+			// 这是imageloader 中调用图片的方法
+			convertView.setTag(holder);
+		}else{
+			holder =(ViewHolder) convertView.getTag();
+		}
 
 		return convertView;
 	}
+	 class ViewHolder{
+		Yuanhuan yu_jindu;
+		TextView tv_name;
+		TextView tv_xiangqing;
+		TextView tv_jindu;
+		TextView tv_mubiao;
+		TextView tv_qitou;
+		TextView tv_shengyutime;
+		TextView tv_area;
+		TextView tv_listcollect;
+		ImageView iv_image;
+		ImageView iv_rongzizhuangtai;
+		ImageView iv_listcollect;
+		 LinearLayout ll_collect;
+	}
+	//XQ3End
 }
