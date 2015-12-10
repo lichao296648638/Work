@@ -183,28 +183,32 @@
                             android:textSize="14dp" />
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:id="@+id/ll_xinsanban"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical" >
+                    <!--需求编号:XQ2-->
+                    <!--需求描述：取消主页新三板-->
+                    <!--修改人：李超-->
+                    <!--修改日期：2015-11-23-->
+                    <!--<LinearLayout-->
+                        <!--android:id="@+id/ll_xinsanban"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:orientation="vertical" >-->
 
-                        <ImageView
-                            android:layout_width="47dp"
-                            android:layout_height="47dp"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="23dp"
-                            android:background="@drawable/btn_xinsanban" />
+                        <!--<ImageView-->
+                            <!--android:layout_width="47dp"-->
+                            <!--android:layout_height="47dp"-->
+                            <!--android:layout_gravity="center_horizontal"-->
+                            <!--android:layout_marginTop="23dp"-->
+                            <!--android:background="@drawable/btn_xinsanban" />-->
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="10dp"
-                            android:text="新三板"
-                            android:textSize="14dp" />
-                    </LinearLayout>
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_gravity="center_horizontal"-->
+                            <!--android:layout_marginTop="10dp"-->
+                            <!--android:text="新三板"-->
+                            <!--android:textSize="14dp" />-->
+                    <!--</LinearLayout>-->
                 </LinearLayout>
 
                 <LinearLayout

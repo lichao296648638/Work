@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/E:/Android/AndroidStudioProjects/Work/Tianshijie1/res/values/strings.xml -->
+    <eat-comment/>
+    <string-array name="jazzy_effects">
+        <item>Standard</item>
+        <item>Tablet</item>
+        <item>CubeIn</item>
+        <item>CubeOut</item>
+        <item>FlipVertical</item>
+        <item>FlipHorizontal</item>
+        <item>Stack</item>
+        <item>ZoomIn</item>
+        <item>ZoomOut</item>
+        <item>RotateUp</item>
+        <item>RotateDown</item>
+        <item>Accordion</item>
+    </string-array>
     <!-- From: file:/E:/Android/AndroidStudioProjects/Work/Tianshijie1/build/intermediates/exploded-aar/Work/actionbarsherlock/unspecified/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference|color" name="background"/>
@@ -20,6 +36,9 @@
     <color name="abs__bright_foreground_disabled_holo_light">#ffb2b2b2</color>
     <color name="abs__bright_foreground_holo_dark">@color/abs__background_holo_light</color>
     <color name="abs__bright_foreground_holo_light">@color/abs__background_holo_dark</color>
+    <!-- From: file:/E:/Android/AndroidStudioProjects/Work/Tianshijie1/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="holo_blue">#FF33E5B5</color>
     <!-- From: file:/E:/Android/AndroidStudioProjects/Work/Tianshijie1/res/values/tb_munion_strings.xml -->
     <eat-comment/>
     <color name="tb_munion_item_force">#e3e3e3</color>
@@ -38,6 +57,7 @@
     <color name="umeng_socialize_text_title">#464f61</color>
     <color name="umeng_socialize_text_ucenter">#595959</color>
     <color name="umeng_socialize_ucenter_bg">#EEEEEE</color>
+    <declare-styleable name="JazzyViewPager"><attr name="style"><enum name="standard" value="0"/><enum name="tablet" value="1"/><enum name="cubein" value="2"/><enum name="cubeout" value="3"/><enum name="flipvertical" value="4"/><enum name="fliphorizontal" value="5"/><enum name="stack" value="6"/><enum name="zoomin" value="7"/><enum name="zoomout" value="8"/><enum name="rotateup" value="9"/><enum name="rotatedown" value="10"/><enum name="accordion" value="11"/></attr><attr format="boolean" name="fadeEnabled1"/><attr format="boolean" name="outlineEnabled"/><attr format="color|reference" name="outlineColor"/></declare-styleable>
     <declare-styleable name="NumberPicker"><attr format="color" name="normalTextColor"/><attr format="dimension" name="normalTextSize"/><attr format="color" name="selecredTextColor"/><attr format="dimension" name="selecredTextSize"/><attr format="dimension" name="unitHight"/><attr format="integer" name="itemNumber"/><attr format="color" name="lineColor"/><attr format="dimension" name="maskHight"/><attr format="boolean" name="noEmpty"/><attr format="boolean" name="isEnable"/></declare-styleable>
     <declare-styleable name="SherlockActionBar"><attr name="navigationMode"><enum name="normal" value="0"/><enum name="listMode" value="1"/><enum name="tabMode" value="2"/></attr><attr name="displayOptions"><flag name="useLogo" value="0x1"/><flag name="showHome" value="0x2"/><flag name="homeAsUp" value="0x4"/><flag name="showTitle" value="0x8"/><flag name="showCustom" value="0x10"/><flag name="disableHome" value="0x20"/></attr><attr format="string" name="title"/><attr format="string" name="subtitle"/><attr name="titleTextStyle"/><attr name="subtitleTextStyle"/><attr format="reference" name="icon"/><attr format="reference" name="logo"/><attr name="divider"/><attr name="background"/><attr format="reference|color" name="backgroundStacked"/><attr name="backgroundSplit"/><attr format="reference" name="customNavigationLayout"/><attr name="height"/><attr format="reference" name="homeLayout"/><attr format="reference" name="progressBarStyle"/><attr format="reference" name="indeterminateProgressStyle"/><attr format="dimension" name="progressBarPadding"/><attr format="dimension" name="itemPadding"/></declare-styleable>
     <declare-styleable name="SherlockActionMenuItemView"><attr name="android:minWidth"/></declare-styleable>
@@ -90,6 +110,9 @@
     <item name="abs__progress_circular" type="id"/>
     <item name="abs__progress_horizontal" type="id"/>
     <item name="abs__up" type="id"/>
+    <!-- From: file:/E:/Android/AndroidStudioProjects/Work/Tianshijie1/res/values/ids.xml -->
+    <eat-comment/>
+    <item name="jazzy_key" type="id"/>
     <!-- From: file:/E:/Android/AndroidStudioProjects/Work/Tianshijie1/build/intermediates/exploded-aar/Work/SlidingMenuLib/unspecified/res/values/values.xml -->
     <eat-comment/>
     <item name="selected_view" type="id"/>
